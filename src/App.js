@@ -4,7 +4,7 @@ import HomeCategories from './HomeCategories'
 import JsCategories from './JsCategories'
 import Editor from './Editor'
 
-function getView(select, handler){
+function getView(select, handler, section){
   /*
    * This function chooses which component to render
   */
@@ -19,7 +19,7 @@ function getView(select, handler){
       viewChoice = <JsCategories handler={handler} />
       break
     case 'Editor':
-      viewChoice = <Editor handler={handler} />
+      viewChoice = <Editor handler={handler} section={section} />
       break
     default:
       viewChoice = <HomeCategories  handler={handler} />
@@ -47,7 +47,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="header">{heading}</h1>
-        { getView(view, this.handleView) }
+        { getView(view, this.handleView, heading) }
       </div>
     )//return
   }//render

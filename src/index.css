@@ -12,3 +12,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.reQuestion {
+  width: 60%;
+  margin: auto;
+}
+
+.showHint {
+  display: inline;
+  margin-left: 10px;
+}
+
+.showHint.hidden {
+  display: none;
+}
