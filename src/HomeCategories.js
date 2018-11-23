@@ -2,10 +2,10 @@ import React from 'react'
 
 const HomeCategories = (props) => (
   <ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li onClick={() => props.handler('JsCategories')}>JS</li>
-    <li>Python</li>
+    <li><button disabled className="button-disabled">HTML</button></li>
+    <li><button disabled  className="button-disabled">CSS</button></li>
+    <li><button onClick={() => props.handler('JsCategories')} className="js">JS</button></li>
+    <li><button disabled className="button-disabled">Python</button></li>
   </ul>
 )
 

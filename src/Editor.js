@@ -26,17 +26,17 @@ class Editor extends Component {
     const hintView = this.state.showHint ? 'showHint' : 'showHint hidden'
     const hintText = this.props.section === 'Regex' ? 'try something like: /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}1\d{4}/   - with backslashes sprinkled throughout' : 'The hint would go here'
     return (
-      <React.Fragment>
+      <div className="editor">
         <p className="reQuestion">{this.state.currQuestion}</p>
         <span>
-          <button onClick={() => this.setState({ showHint: !this.state.showHint })}>hint</button>
+          <button onClick={() => this.setState({ showHint: !this.state.showHint })} className="hint">hint</button>
           <p className={hintView}>{hintText}</p>
         </span>
-        <form onSubmit={parseResponse}>
+        <form onSubmit={parseResponse} className="answer-form">
           <input type="text"/>
-          <button type="submit">submit</button>
+          <button type="submit" className="submit-ans">submit</button>
         </form>
-      </React.Fragment>
+      </div>
     )//return
   }//render
 }//Editor

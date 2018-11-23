@@ -46,7 +46,7 @@ class App extends Component {
     
     return (
       <div className="App">
-        <h1 className="header">{heading}</h1>
+        <header><h1 className="header">{heading}</h1></header>
         { getView(view, this.handleView, heading) }
       </div>
     )//return

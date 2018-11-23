@@ -17,13 +17,13 @@ function jsSetup(props, section){
 
 const JsCategories = (props) => (
   <ul>
-    <li onClick={() => props.handler('HomeCategories', null)}>Back</li>
-    <li onClick={() => jsSetup(props,'Arrays')}>Arrays</li>
-    <li onClick={() => jsSetup(props,'Strings')}>Strings</li>
-    <li onClick={() => jsSetup(props,'Dates')}>Dates</li>
-    <li onClick={() => jsSetup(props,'Objects')}>Objects</li>
-    <li onClick={() => jsSetup(props,'Regex')}>Regex</li>
-    <li onClick={() => jsSetup(props,'DOM')}>DOM</li>
+    <li onClick={() => props.handler('HomeCategories', null)} className="back">Back</li>
+    <li onClick={() => jsSetup(props,'Arrays')}><button disabled className="button-disabled">Arrays</button></li>
+    <li onClick={() => jsSetup(props,'Strings')}><button disabled className="button-disabled">Strings</button></li>
+    <li onClick={() => jsSetup(props,'Dates')}><button disabled className="button-disabled">Dates</button></li>
+    <li onClick={() => jsSetup(props,'Objects')}><button disabled className="button-disabled">Objects</button></li>
+    <li onClick={() => jsSetup(props,'Regex')}><button className="button-regex">Regex</button></li>
+    <li onClick={() => jsSetup(props,'DOM')}><button disabled className="button-disabled">DOM</button></li>
   </ul>
 )
 export default JsCategories
